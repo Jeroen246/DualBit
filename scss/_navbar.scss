@@ -1,6 +1,9 @@
 // Styling for the navbar
 #mainNav {
-  background-color: $gray-900;
+  background-color: $gray-800;
+  .logo-header {
+    height: 50px;
+  }
   .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -10,16 +13,6 @@
     border: 0;
     background-color: $primary;
     @include heading-font;
-  }
-  .navbar-brand {
-    color: $primary;
-    @include script-font;
-    &.active,
-    &:active,
-    &:focus,
-    &:hover {
-      color: darken($primary, 10%);
-    }
   }
   .navbar-nav {
     .nav-item {
@@ -40,34 +33,29 @@
 }
 @media(min-width:992px) {
   #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent;
+    background-color: $gray-900;
     .navbar-brand {
-      font-size: 1.75em;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
+      font-size: 50px;
     }
     .navbar-nav {
       .nav-item {
         .nav-link {
-          padding: 1.1em 1em !important;
+          padding: 1.5em 1em !important;
         }
       }
     }
     &.navbar-shrink {
+      margin: auto;
       padding-top: 0;
       padding-bottom: 0;
-      background-color: $gray-900;
-      .navbar-brand {
-        font-size: 1.25em;
-        padding: 12px 0;
-      }
+      background-color: rgba(71,71,71,0.9);
+
     }
   }
 }
