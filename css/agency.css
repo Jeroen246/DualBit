@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Coda");
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -8,15 +13,15 @@ p {
 }
 
 a {
-  color: #fe0391;
+  color: #fe2e71;
 }
 
 a:hover {
-  color: #cd0174;
+  color: #f80151;
 }
 
 .text-primary {
-  color: #fe0391 !important;
+  color: #fe2e71 !important;
 }
 
 h1,
@@ -26,7 +31,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 section {
@@ -55,7 +60,7 @@ section h3.section-subheading {
 }
 
 .btn {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -65,13 +70,13 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #fe0391;
-  border-color: #fe0391;
+  background-color: #fe2e71;
+  border-color: #fe2e71;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #da017c !important;
-  border-color: #da017c !important;
+  background-color: #fe0857 !important;
+  border-color: #fe0857 !important;
   color: white;
 }
 
@@ -80,12 +85,12 @@ section h3.section-subheading {
 }
 
 ::-moz-selection {
-  background: #fe0391;
+  background: #fe2e71;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fe0391;
+  background: #fe2e71;
   text-shadow: none;
 }
 
@@ -98,7 +103,11 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #212529;
+  background-color: #343a40;
+}
+
+#mainNav .logo-header {
+  height: 30px;
 }
 
 #mainNav .navbar-toggler {
@@ -108,17 +117,8 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fe0391;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-#mainNav .navbar-brand {
-  color: #fe0391;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #cd0174;
+  background-color: #fe2e71;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -127,11 +127,11 @@ img::-moz-selection {
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fe0391;
+  color: #fe2e71;
 }
 
 @media (min-width: 992px) {
@@ -151,16 +151,16 @@ img::-moz-selection {
     padding: 1.5em 1em !important;
   }
   #mainNav.navbar-shrink {
+    margin: auto;
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    display: none;
+    background-color: rgba(71, 71, 71, 0.9);
   }
 }
 
 header.masthead {
+  padding-bottom: 25%;
+  padding-top: 25%;
   text-align: center;
   color: #343a40;
   background-image: url("/img/efe-kurnaz-315384-unsplash.jpg");
@@ -172,9 +172,20 @@ header.masthead {
   background-size: cover;
 }
 
+header.masthead .logo-mast {
+  height: 500px;
+  padding-bottom: 20px;
+}
+
 header.masthead .intro-text {
-  padding-top: 150px;
-  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+header.masthead .intro-text .button-header {
+  width: 300px;
+  margin: auto;
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -190,19 +201,23 @@ header.masthead .intro-text .intro-heading {
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 25px;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
+  header.masthead {
+    padding-bottom: 100px;
+    padding-top: 150px;
+  }
   header.masthead .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    margin: 0px;
+    padding: 0px;
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   header.masthead .intro-text .intro-heading {
@@ -210,13 +225,18 @@ header.masthead .intro-text .intro-heading {
     font-weight: 700;
     line-height: 75px;
     margin-bottom: 50px;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
 
 .service-heading {
   margin: 15px 0;
   text-transform: none;
+}
+
+.serviceImg {
+  height: 500px;
+  width: 350px;
 }
 
 #portfolio .portfolio-item {
@@ -240,7 +260,7 @@ header.masthead .intro-text .intro-heading {
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 3, 145, 0.9);
+  background: rgba(254, 46, 113, 0.9);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -444,7 +464,7 @@ header.masthead .intro-text .intro-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fe0391;
+  background-color: #fe2e71;
 }
 
 .timeline > li .timeline-image h4 {
@@ -565,36 +585,60 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
-.team-member {
-  margin-bottom: 50px;
+#team {
+  background-color: white;
+}
+
+.team-row {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-content: center;
 }
 
-.team-member img {
-  width: 225px;
-  height: 225px;
-  border: 7px solid #fff;
+.team-child {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
 }
 
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
+.team-child img {
+  margin-bottom: 20px;
+  width: 300px;
 }
 
-.team-member p {
-  margin-top: 0;
+@media (min-width: 992px) {
+  .team-row {
+    flex-direction: row;
+  }
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-color: #6D3D5D;
+  background-image: url("../img/pexels-photo-545521.jpeg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 1000px;
 }
 
 section#contact .section-heading {
   color: #fff;
+}
+
+section#contact .section-subheading, section#contact label {
+  color: #fff;
+}
+
+section#contact .info {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+section#contact label {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 10px 0 10px;
 }
 
 section#contact .form-group {
@@ -615,34 +659,34 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-  border-color: #fe0391;
+  border-color: #fe2e71;
   box-shadow: none;
 }
 
 section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 section#contact :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 18- */
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 section#contact ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 19+ */
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 footer {
@@ -654,7 +698,7 @@ footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 footer ul.quicklinks {
@@ -662,7 +706,7 @@ footer ul.quicklinks {
   line-height: 40px;
   margin-bottom: 0;
   text-transform: none;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Coda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 ul.social-buttons {
@@ -685,5 +729,5 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fe0391;
+  background-color: #fe2e71;
 }

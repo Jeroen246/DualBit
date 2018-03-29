@@ -1,11 +1,25 @@
 // Styling for the contact section
 section#contact {
-  background-color: $gray-900;
-  background-image: url('../img/map-image.png');
+  background-color: #6D3D5D;
+  background-image: url('../img/pexels-photo-545521.jpeg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 1000px;
   .section-heading {
     color: $white;
+  }
+  .section-subheading, label {
+    color: $white;
+  }
+  .info {
+    background-color: rgba(255,255,255,0.5);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  label {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0 10px 0 10px;
   }
   .form-group {
     margin-bottom: 25px;
